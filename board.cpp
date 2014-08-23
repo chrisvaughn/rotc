@@ -151,21 +151,29 @@ StatusType GameBoard::getCurrentStatus(Mosquito mosqArray[])
 bool GameBoard::IsLegalAliceMove(Cajun A)
 {
 
-    if ((A.getDirection() == 'N') && (Board[A.getX() + 1][A.getY()].occupant == ' ') || (Board[A.getX() + 1][A.getY()].occupant == 'T'))
+    if (A.getDirection() == 'N' &&
+        ((Board[A.getX() + 1][A.getY()].occupant == ' ') ||
+         (Board[A.getX() + 1][A.getY()].occupant == 'T')))
     {
         return true;
     }
 
-    else if ((A.getDirection() == 'S') && (Board[A.getX() - 1][A.getY()].occupant == ' ') || (Board[A.getX() - 1][A.getY()].occupant == 'T'))
+    else if (A.getDirection() == 'S' &&
+             ((Board[A.getX() - 1][A.getY()].occupant == ' ') ||
+              (Board[A.getX() - 1][A.getY()].occupant == 'T')))
     {
         return true;
     }
 
-    else if ((A.getDirection() == 'E') && (Board[A.getX()][A.getY() + 1].occupant == ' ') || (Board[A.getX()][A.getY() + 1].occupant == 'T'))
+    else if (A.getDirection() == 'E' &&
+             ((Board[A.getX()][A.getY() + 1].occupant == ' ') ||
+              (Board[A.getX()][A.getY() + 1].occupant == 'T')))
     {
         return true ;
     }
-    else if ((A.getDirection() == 'W') && (Board[A.getX()][A.getY() - 1].occupant == ' ') || (Board[A.getX()][A.getY() - 1].occupant == 'T'))
+    else if (A.getDirection() == 'W' &&
+            ((Board[A.getX()][A.getY() - 1].occupant == ' ') ||
+              (Board[A.getX()][A.getY() - 1].occupant == 'T')))
     {
         return true;
     }

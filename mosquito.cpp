@@ -7,8 +7,6 @@
 using namespace std;
 
 
-
-
 Mosquito::Mosquito()
 {
 
@@ -149,13 +147,3 @@ void Mosquito::move(direction aDirection)
     else ;
 
 }
-
-
-
-
-
-
-
-
-
-

@@ -33,8 +33,7 @@ void fillArray(GameBoard &, Mosquito[]);
 //Post: All data in myMosquitoes are updated.
 
 
-
-void main()
+int main()
 {
     char choice;
     char anotherGame = 'Y';
@@ -356,10 +355,8 @@ void main()
         cout << "Would like to play another game? (Y or N) ";
         cin >> anotherGame;
         cout << endl;
-
-
-
     }
+    return 0;
 }
 
 
@@ -491,6 +488,7 @@ bool printMenu3()
         }
 
     }
+    return false;
 
 }
 
