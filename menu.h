@@ -2,32 +2,32 @@
 #include <string>
 #include "board.h"
 
-   using namespace std;
+using namespace std;
 
 
- class Menu
- {
+class Menu
+{
 
-	public:
-		
-		//Constructor
+public:
 
-		Menu();
-		
-		//Observors
+    //Constructor
 
-		void DisplayMenu();
+    Menu();
 
-        void DisplayRules();
+    //Observors
 
-		void DisplayWelcome();
-		
-		void gameSetup();
+    void DisplayMenu();
 
-		//Transformers
+    void DisplayRules();
 
-	private:
+    void DisplayWelcome();
 
-		bool checkSetup;
+    void gameSetup();
 
- }
+    //Transformers
+
+private:
+
+    bool checkSetup;
+
+}

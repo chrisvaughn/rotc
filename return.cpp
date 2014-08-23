@@ -1,17 +1,16 @@
- #include "board.h"
- #include <iostream>
- #include <string>
+#include "board.h"
+#include <iostream>
+#include <string>
 
-     using namespace std;
+using namespace std;
 
- void main()
- {
+void main()
+{
 
-    
-	Board game;
+    Board game;
 
     game.CajunPlaces();
 
     game.DisplayBoard();
 
- }
+}

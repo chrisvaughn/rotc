@@ -1,161 +1,161 @@
 
 
- #include "mosquito.h"
+#include "mosquito.h"
 
- #include <iostream>
+#include <iostream>
 
-	 using namespace std;
+using namespace std;
 
-	 
 
 
- Mosquito::Mosquito()
- {
 
-	 xPos = 0;
-	 yPos = 0;
+Mosquito::Mosquito()
+{
 
- }
+    xPos = 0;
+    yPos = 0;
 
- //************************************************************
- 
- Mosquito::Mosquito(int x, int y)
- {
+}
 
-	 xPos = x;
-	 yPos = y;
+//************************************************************
 
- }
+Mosquito::Mosquito(int x, int y)
+{
 
- //************************************************************
+    xPos = x;
+    yPos = y;
 
- int Mosquito::getX()
- {
+}
 
-	 return xPos;
+//************************************************************
 
- }
+int Mosquito::getX()
+{
 
- //***********************************************************
+    return xPos;
 
- int Mosquito::getY()
- {
+}
 
-	 return yPos;
+//***********************************************************
 
- }
+int Mosquito::getY()
+{
 
- //***********************************************************
+    return yPos;
 
- bool Mosquito::IsAlive()
- {
+}
 
-	 return alive;
+//***********************************************************
 
- }
+bool Mosquito::IsAlive()
+{
 
- //***********************************************************
+    return alive;
 
- void Mosquito::setAliveOrDead(bool newState)
- {
+}
 
-	 alive = newState;
+//***********************************************************
 
- }
+void Mosquito::setAliveOrDead(bool newState)
+{
 
- //***********************************************************
+    alive = newState;
 
- void Mosquito::setX(int X)
- {
+}
 
-	 xPos = X;
+//***********************************************************
 
- }
+void Mosquito::setX(int X)
+{
 
- //***********************************************************
+    xPos = X;
 
- void Mosquito::setY(int Y)
- {
+}
 
-	 yPos = Y;
+//***********************************************************
 
- }
+void Mosquito::setY(int Y)
+{
 
- //***********************************************************
+    yPos = Y;
 
- void Mosquito::move(direction aDirection)
- {
+}
 
-	 if(aDirection == N)
-	 {
-		 
-		 xPos = xPos + 1;
+//***********************************************************
 
-	 }
+void Mosquito::move(direction aDirection)
+{
 
-	 else if(aDirection == NE)
-	 {
+    if (aDirection == N)
+    {
 
-		 xPos = xPos + 1;
-		 yPos = yPos + 1;
+        xPos = xPos + 1;
 
-	 }
+    }
 
-	 else if(aDirection == E)
-	 {
+    else if (aDirection == NE)
+    {
 
-		 yPos = yPos + 1;
+        xPos = xPos + 1;
+        yPos = yPos + 1;
 
-	 }
+    }
 
-	 else if(aDirection == SE)
-	 {
+    else if (aDirection == E)
+    {
 
-		 xPos = xPos - 1;
-		 yPos = yPos + 1;
+        yPos = yPos + 1;
 
-	 }
+    }
 
-	 else if(aDirection == S)
-	 {
+    else if (aDirection == SE)
+    {
 
-		 xPos = xPos - 1;
+        xPos = xPos - 1;
+        yPos = yPos + 1;
 
-	 }
+    }
 
-	 else if(aDirection == SW)
-	 {
+    else if (aDirection == S)
+    {
 
-		 xPos = xPos - 1;
-		 yPos = yPos - 1;
+        xPos = xPos - 1;
 
-	 }
+    }
 
-	 else if(aDirection == W)
-	 {
+    else if (aDirection == SW)
+    {
 
-		 yPos = yPos - 1;
+        xPos = xPos - 1;
+        yPos = yPos - 1;
 
-	 }
+    }
 
-	 else if(aDirection == NW)
-	 {
+    else if (aDirection == W)
+    {
 
-		 xPos = xPos + 1;
-		 yPos = yPos - 1;
+        yPos = yPos - 1;
 
-	 }
+    }
 
-     else ;
- 
- }
+    else if (aDirection == NW)
+    {
 
+        xPos = xPos + 1;
+        yPos = yPos - 1;
 
+    }
 
+    else ;
 
+}
 
 
 
 
 
-		 
+
+
+
+
+

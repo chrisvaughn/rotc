@@ -1,182 +1,182 @@
 
 
- #include <iostream>
- #include "cajun.h"
+#include <iostream>
+#include "cajun.h"
 
-	 using namespace std;
+using namespace std;
 
 
- 
- //****************************************************************
- 
- Cajun::Cajun()
- {
 
-	 xPos = 0;
-	 yPos = 0;
-	 orientation = 'N';
+//****************************************************************
 
- }
+Cajun::Cajun()
+{
 
- //******************************************************************
+    xPos = 0;
+    yPos = 0;
+    orientation = 'N';
 
- Cajun::Cajun(int x, int y, char direction)
- {
+}
 
-	 xPos = x;
-	 yPos = y;
-	 orientation = direction;
+//******************************************************************
 
- }
+Cajun::Cajun(int x, int y, char direction)
+{
 
- //******************************************************************
+    xPos = x;
+    yPos = y;
+    orientation = direction;
 
- int Cajun::getX()
- {
+}
 
-	 return xPos;
+//******************************************************************
 
- }
+int Cajun::getX()
+{
 
- //******************************************************************
+    return xPos;
 
- int Cajun::getY()
- {
+}
 
-	 return yPos;
+//******************************************************************
 
- }
+int Cajun::getY()
+{
 
- //******************************************************************
+    return yPos;
 
- char Cajun::getDirection()
- {
+}
 
-	 return orientation;
+//******************************************************************
 
- }
+char Cajun::getDirection()
+{
 
+    return orientation;
 
- //******************************************************************
+}
 
- void Cajun::move()
- {
 
-	 if(orientation == 'N')
-	 {
+//******************************************************************
 
-		 xPos = xPos + 1;
+void Cajun::move()
+{
 
-	 }
+    if (orientation == 'N')
+    {
 
-	 else if(orientation == 'S')
-	 {
+        xPos = xPos + 1;
 
-		 xPos = xPos - 1;
+    }
 
-	 }
+    else if (orientation == 'S')
+    {
 
-	 else if(orientation == 'E')
-	 {
+        xPos = xPos - 1;
 
-		 yPos = yPos + 1;
+    }
 
-	 }
+    else if (orientation == 'E')
+    {
 
-	 else if(orientation == 'W')
-	 {
+        yPos = yPos + 1;
 
-		 yPos = yPos - 1;
+    }
 
-	 }
+    else if (orientation == 'W')
+    {
 
-	 else ;
+        yPos = yPos - 1;
 
- }
+    }
 
- //*****************************************************************
+    else ;
 
- void Cajun::turn(turnDirection mySide)
- {
+}
 
-	 if(mySide == CLOCKWISE)
-	 {
-		 
-		if(orientation == 'N')
-		{
+//*****************************************************************
 
-			 orientation = 'E';
+void Cajun::turn(turnDirection mySide)
+{
 
-		 }
+    if (mySide == CLOCKWISE)
+    {
 
-		 else if(orientation == 'S')
-		{
+        if (orientation == 'N')
+        {
 
-			 orientation = 'W';
+            orientation = 'E';
 
-		}
+        }
 
-		else if(orientation == 'E')
-		{
+        else if (orientation == 'S')
+        {
 
-			 orientation = 'S';
+            orientation = 'W';
 
-		}
+        }
 
-		else if(orientation == 'W')
-		{
+        else if (orientation == 'E')
+        {
 
-			 orientation = 'N';
+            orientation = 'S';
 
-		}
+        }
 
-		else ;
+        else if (orientation == 'W')
+        {
 
-	 }
+            orientation = 'N';
 
-	 if(mySide == ANTI_CLOCKWISE)
-	 {
+        }
 
+        else ;
 
-		 if(orientation == 'N')
-		 {
+    }
 
-			 orientation = 'W';
+    if (mySide == ANTI_CLOCKWISE)
+    {
 
-		 }
 
-		 else if(orientation == 'S')
-		 {
+        if (orientation == 'N')
+        {
 
-			 orientation = 'E';
+            orientation = 'W';
 
-		 }
+        }
 
-		 else if(orientation == 'E')
-		 {
+        else if (orientation == 'S')
+        {
 
-			 orientation = 'N';
+            orientation = 'E';
 
-		 }
+        }
 
-		 else if(orientation == 'W')
-		 {
+        else if (orientation == 'E')
+        {
 
-			 orientation = 'S';
+            orientation = 'N';
 
-		 }
+        }
 
-		 else ;
+        else if (orientation == 'W')
+        {
 
-	 }
+            orientation = 'S';
 
- }
+        }
 
- //****************************************************************
+        else ;
 
+    }
 
+}
 
-	 
+//****************************************************************
+
+
+
+
 
 
 

@@ -2,139 +2,139 @@
 #include <string>
 #include "menu.h"
 
-   using namespace std;
+using namespace std;
 
 //////////////////////////////////////////////////////////
 //
 //////////////////////////////////////////////////////////
 
- void Menu::DisplayWelcome()
- {
+void Menu::DisplayWelcome()
+{
 
-    char proceed;  
-	 
-	// system("banner \"The Return\" \"  of the\" \"  CAJUNS\"");
+    char proceed;
 
-	cout<<"Please enter \'C\' to continue: ";
+    // system("banner \"The Return\" \"  of the\" \"  CAJUNS\"");
 
-	 cin>>proceed;
+    cout << "Please enter \'C\' to continue: ";
 
-	 cout<<endl;
+    cin >> proceed;
 
-	 if (proceed != 'C' || proceed != 'c')
-	 {
+    cout << endl;
 
-      while (proceed != 'C' || proceed != 'c')
-	   {
+    if (proceed != 'C' || proceed != 'c')
+    {
 
-	      cout<<"Sorry your input was invalid"<<endl;
-			
-			cout<<"Please press \'C\': ";
+        while (proceed != 'C' || proceed != 'c')
+        {
 
-			cin>>proceed;
+            cout << "Sorry your input was invalid" << endl;
 
-			cout<<endl;
+            cout << "Please press \'C\': ";
 
-		}
+            cin >> proceed;
 
-		
-	 }	
-		
-	else 
-	{ 
-		
-	   system("cls");
-		
-	}
+            cout << endl;
 
- }
+        }
+
+
+    }
+
+    else
+    {
+
+        system("cls");
+
+    }
+
+}
 
 //********************************************************
 //
 //********************************************************
 
- void Menu::DisplayMenu()
- {
+void Menu::DisplayMenu()
+{
 
-	 int menu_selection;
+    int menu_selection;
 
-	 cout<<"PLEASE SELECT A NUMBER"<<endl;
+    cout << "PLEASE SELECT A NUMBER" << endl;
 
-	 cout<<endl;
+    cout << endl;
 
-	 cout<<"1 - Rules & Instructions"<<endl;
+    cout << "1 - Rules & Instructions" << endl;
 
-	 cout<<"2 - Game Setup"<<endl;
+    cout << "2 - Game Setup" << endl;
 
-	 cout<<"3 - Start Game"<<endl;
+    cout << "3 - Start Game" << endl;
 
-	 cout<<"4 - EXIT"<<endl;
+    cout << "4 - EXIT" << endl;
 
-	 cout<<"Enter selection: ";
+    cout << "Enter selection: ";
 
-	 cin>>menu_selection;
+    cin >> menu_selection;
 
-	 cout<<endl;
+    cout << endl;
 
-	 cout<<"** NOTE: You must go through \"GAME SETUP\" before starting a game"<<endl;
+    cout << "** NOTE: You must go through \"GAME SETUP\" before starting a game" << endl;
 
-	 if (menu_selection != 1 || menu_selection != 2 || menu_selection != 3 || menu_selection != 4)
-	 {
+    if (menu_selection != 1 || menu_selection != 2 || menu_selection != 3 || menu_selection != 4)
+    {
 
-		 while ((menu_selection != 1 || menu_selection != 2 || menu_selection != 3 || menu_selection != 4)
-		 {
+        while ((menu_selection != 1 || menu_selection != 2 || menu_selection != 3 || menu_selection != 4)
+    {
 
-			 cout<<menu_selection<<" is invalid please choose from 1, 2, 3, or 4 ";
+        cout << menu_selection << " is invalid please choose from 1, 2, 3, or 4 ";
 
-			 cin>>menu_selection;
+        cin >> menu_selection;
 
-			 cout<<endl;
+        cout << endl;
 
-		 }
+    }
 
-	 }
+}
 
-    switch (menu_selection)
-	{
+switch (menu_selection)
+    {
 
-	 case 1:
+    case 1:
 
-		 system("cls");
-		 
-		 DisplayRules();
+        system("cls");
 
-	 case 2:
+        DisplayRules();
 
-		 system("cls");
-		 
-		 gameSetup();
+    case 2:
 
-	 case 3:
+        system("cls");
 
-		 system("cls");
-		 
-		 if (checkSetup)
-		 {
+        gameSetup();
 
-			 break;
+    case 3:
 
-		 }
+        system("cls");
 
-		 else 
-		 {
+        if (checkSetup)
+        {
 
-			 cout<<"You must enter Game Setup before starting a game"<<endl;
+            break;
 
-			 system("cls");
+        }
 
-			 DisplayMenu();
+        else
+        {
 
-		 }
+            cout << "You must enter Game Setup before starting a game" << endl;
 
-	 case 4:
+            system("cls");
 
-		 exit(1);
+            DisplayMenu();
 
-	 }
+        }
 
- }
+    case 4:
+
+        exit(1);
+
+    }
+
+}

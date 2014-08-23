@@ -1,45 +1,45 @@
- #include <iostream>
+#include <iostream>
 
-	 using namespace std;
+using namespace std;
 
 
 #ifndef _turnDirectDEF
-#define _turnDirectDEF	 
- enum turnDirection {CLOCKWISE, ANTI_CLOCKWISE};
+#define _turnDirectDEF
+enum turnDirection {CLOCKWISE, ANTI_CLOCKWISE};
 #endif
 
 
- #ifndef _CajunDEF
- #define _CajunDEF
- 
- class Cajun
-{ 
+#ifndef _CajunDEF
+#define _CajunDEF
 
- //Description: Contains the representation of Cajun and provides operations 
- //such as moving and rotation as described in earlier document.
+class Cajun
+{
 
- private:
+    //Description: Contains the representation of Cajun and provides operations
+    //such as moving and rotation as described in earlier document.
 
-     int xPos; //represents the x (resp. y) coordinate of the Cajun
-     int yPos;
+private:
 
-     char orientation; //represents the direction that the Cajun is facing
+    int xPos; //represents the x (resp. y) coordinate of the Cajun
+    int yPos;
 
- public:
+    char orientation; //represents the direction that the Cajun is facing
+
+public:
 
     Cajun();// CONSTRUCTOR
-    // initializes a Cajun whose coordinates is (0,0) and it is facing North. 
+    // initializes a Cajun whose coordinates is (0,0) and it is facing North.
     //Pre: none
     //Post: all data of the Cajun are initialized
 
     Cajun(int, int, char); // CONSTRUCTOR
-    //initializes a Cajun whose coordinates is (x,y) and it is facing the 
-	//direction indicated by myChar
-	//Pre: none
+    //initializes a Cajun whose coordinates is (x,y) and it is facing the
+    //direction indicated by myChar
+    //Pre: none
     //Post: all data of the Cajun are initialized
 
 
-	//OBSERVERS
+    //OBSERVERS
 
     int getX();
     int getY();
@@ -51,14 +51,14 @@
 
     void move();
     //Pre: Assume that the move has been checked to be feasible
-    //Post: xPos or yPos are updated according to the orientation 
+    //Post: xPos or yPos are updated according to the orientation
     //of the Cajun.
 
-    void turn(turnDirection); 
+    void turn(turnDirection);
     //Pre: none
     //Post: orientation of the Cajun is updated accordingly
-    //Range of values for mySide is either CLOCKWISE or ANTI_CLOCKWISE 
-    //the data type turnDirection stands for {CLOCKWISE, ANTI_CLOCKWISE}. 
+    //Range of values for mySide is either CLOCKWISE or ANTI_CLOCKWISE
+    //the data type turnDirection stands for {CLOCKWISE, ANTI_CLOCKWISE}.
 
- };
- #endif
+};
+#endif
