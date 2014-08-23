@@ -43,7 +43,7 @@ void Menu::DisplayWelcome()
     else
     {
 
-        system("cls");
+        system("clear");
 
     }
 
@@ -99,19 +99,19 @@ switch (menu_selection)
 
     case 1:
 
-        system("cls");
+        system("clear");
 
         DisplayRules();
 
     case 2:
 
-        system("cls");
+        system("clear");
 
         gameSetup();
 
     case 3:
 
-        system("cls");
+        system("clear");
 
         if (checkSetup)
         {
@@ -125,7 +125,7 @@ switch (menu_selection)
 
             cout << "You must enter Game Setup before starting a game" << endl;
 
-            system("cls");
+            system("clear");
 
             DisplayMenu();
 

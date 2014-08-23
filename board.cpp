@@ -69,7 +69,7 @@ void GameBoard::DisplayBoard()
 
 
 
-    system("cls");
+    system("clear");
 
 
     for (int i = 0; i < MAX_COL - 1; i++)

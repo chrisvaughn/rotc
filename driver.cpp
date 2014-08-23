@@ -336,7 +336,7 @@ int main()
         if (theRoom.getCurrentStatus(mosquitoes) == BOB_WIN)
         {
 
-            system("cls");
+            system("clear");
 
             cout << MosqPlayer << " is the winner." << endl;
 
@@ -344,7 +344,7 @@ int main()
 
         else if (theRoom.getCurrentStatus(mosquitoes) == ALICE_WIN)
         {
-            system("cls");
+            system("clear");
 
             cout << CajunPlayer << " is the winner." << endl;
 
@@ -401,7 +401,7 @@ void WELCOME()
     cout << endl;
     cin >> cont;
 
-    system("cls");
+    system("clear");
 
 }
 
